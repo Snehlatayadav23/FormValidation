@@ -4,14 +4,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Validation</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" >
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
   <div class="container">
-    <form>
+    <form id="contact-form" action="thanks.html"   onsubmit="return validateForm()">
       <i class="fas fa-paper-plane"></i>
-      <H1>Form Validation</H1>
+      <h1>Form Validation</h1>
       <br>
       <div class="input-group">
         <label>Full Name</label>
@@ -21,7 +20,7 @@
 
       <div class="input-group">
         <label>Phone No.</label>
-        <input type="tel" placeholder="123 456 7890" id="contact-phone" onkeyup="validatephone()">
+        <input type="tel" placeholder="123 456 7890" id="contact-phone" maxlength="10" onkeyup="validatephone()">
         <span id="phone-error"></span>
       </div>
 
@@ -31,31 +30,25 @@
         <span id="email-error"></span>
       </div>   
       <div class="input-group">
-        <label>password</label>
-        <input type="password" placeholder="Enter password"  id="contact-password" onkeyup="validatepassword()"> 
+        <label>Password</label>
+        <input type="password" placeholder="Enter password"  id="contact-password" maxlength="8" onkeyup="validatepassword()"> 
         <span id="password-error"></span>
       </div>   
-<br>
-
+      <br>
       <div class="input-group"> 
         <label>Your Message</label>
         <textarea rows="5" placeholder="Enter your message" id="contact-message" onkeyup="validatemessage()"></textarea>
         <span id="message-error"></span>
       </div>
 
-    <button onclick="return validateForm()">Submit</button>
-    
-    <span id="submit-error" ></span>
-    
+      <button type="submit"> Submit</a></button>
+      <span id="submit-error"></span>
+    </form>
 
-   
-  </form>
-
-  <div class="useful-links">
-    <a href="https://www.canva.com/design/DAGMI3g_3Tk/dTGVjGa6G_lsm3fUqcgpog/view?utm_content=DAGMI3g_3Tk&utm_campaign=designshare&utm_medium=link&utm_source=editor">Group No.6</a>
+    <div class="useful-links">
+      <a href="https://www.canva.com/design/DAGMI3g_3Tk/dTGVjGa6G_lsm3fUqcgpog/view?utm_content=DAGMI3g_3Tk&utm_campaign=designshare&utm_medium=link&utm_source=editor">Group No.6</a>
+    </div>
   </div>
-  
-  </div>
-   <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
